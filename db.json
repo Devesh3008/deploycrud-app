@@ -1,0 +1,93 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "empolyee": [
+    {
+      "firstname": "DEVESH",
+      "lastname": "DUBEY",
+      "email": "rockdevesh123@gmail.com",
+      "pincode": 486001,
+      "education": "GRADUATE",
+      "company": "devesh dubey",
+      "id": 1
+    },
+    {
+      "firstname": "shikhar",
+      "lastname": "tiwari",
+      "email": "shyam.gauta.112@gmail.com",
+      "pincode": 486002,
+      "education": "GRADUATE",
+      "company": "shikhar.com",
+      "id": 2
+    },
+    {
+      "firstname": "DEVESH",
+      "lastname": "DUBEY",
+      "email": "rockdevesh123@gmail.com",
+      "pincode": 486001,
+      "education": "POST-GRADUATE",
+      "company": "devesh dubey",
+      "id": 3
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "pincode": "",
+      "education": "",
+      "company": "",
+      "id": 4
+    },
+    {
+      "firstname": "fsef",
+      "lastname": "faef",
+      "email": "fea",
+      "pincode": null,
+      "education": "",
+      "company": "",
+      "id": 5
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "pincode": "",
+      "education": "",
+      "company": "",
+      "id": 6
+    },
+    {
+      "firstname": "sg",
+      "lastname": "",
+      "email": "123@gmail.com",
+      "pincode": "",
+      "education": "",
+      "company": "",
+      "id": 7
+    },
+    {
+      "firstname": "suresh",
+      "lastname": "singh",
+      "email": "xyz@gmail.com",
+      "pincode": 234323,
+      "education": "POST-GRADUATE",
+      "company": "jio",
+      "id": 8
+    }
+  ]
+}

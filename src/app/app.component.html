@@ -1,0 +1,85 @@
+<mat-toolbar color="warm">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span >Crud-Application</span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button color="primary" (click)="openAddEditEmpForm()">Add Employee</button>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="main-body">
+<mat-form-field>
+  <mat-label>Search</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="firstname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.firstname}} </td>
+    </ng-container>
+
+  
+    <ng-container matColumnDef="lastname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Last Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.lastname}} </td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> E-mail </th>
+      <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+    </ng-container>
+    <ng-container matColumnDef="pincode">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Pincode </th>
+      <td mat-cell *matCellDef="let row"> {{row.pincode}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="education">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Education </th>
+      <td mat-cell *matCellDef="let row"> {{row.education}} </td>
+    </ng-container>
+    <ng-container matColumnDef="company">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Company </th>
+      <td mat-cell *matCellDef="let row"> {{row.company}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+      <td mat-cell *matCellDef="let row"> 
+      <button mat-icon-button color="primary" (click)="openEditEmpForm(row)">
+        <mat-icon>edit</mat-icon>
+      </button>  
+      <button mat-icon-button color="warn" (click)="deleteEmpolyee(row.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+   
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>
+</div>
+
+
